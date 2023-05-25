@@ -6,13 +6,18 @@ using namespace std;
 class String
 {
 private:
-	char* str = nullptr;
+	char** str;
+	int* sizeStr;
+	int amountStr;
 public:
-	String();
+	String() : String::String(80){};
 
 	String(int size);
 
 	String(const char* str);
+
+	void displayStr();
+
 
 
 	~String();
